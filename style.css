@@ -243,7 +243,7 @@ footer p{
     .banner{
         display: flex;
         flex-direction: column;
-        grid-row-gap: 50px;
+        grid-row-gap: 60px;
     }
     .banner img{
         width: 350px;
@@ -251,9 +251,10 @@ footer p{
     }
     .banner-details{
         padding: 0px;
+        margin-left: 25px;
     }
     .banner-details h2{
-        font-size: 50px;
+        font-size: 40px;
     }
     .football-players{
         width: 100%;
