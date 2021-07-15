@@ -233,7 +233,7 @@ footer p{
     }
     .menu li{
         list-style:none;
-        font-size: 8px;
+        font-size: 7px;
         margin-right: 5px;
         margin-top: 10px;
     }
@@ -283,7 +283,7 @@ footer p{
         padding: 10px;
     }
     .container-details img{
-        width: 370px;
+        width: 330px;
         margin-top: 30px;
         margin-left: 0px;
     }
@@ -320,7 +320,7 @@ footer p{
     }
     .balls{
         width: 100%;
-        margin-left: 20px;
+        margin-left: 10px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
