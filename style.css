@@ -4,7 +4,7 @@
 /* common style */
 
 body{
-    margin: 0px;
+    margin: auto;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -13,21 +13,20 @@ body{
 header{
     background-color: #2D25A0;
     color: #fff;
-    width: 1440px;
-    height: 600px;
 }
 header:hover img{
     transform:scale(1.5)
 }
 .menu{
     display: flex;
+    justify-content: center;
 }
 .menu li{
     list-style:none;
-    margin-right: 60px;
+    padding: 0px 20px;
     margin-top: 40px;
 }
-.menu a, .banner-details a{
+.menu li a, .banner-details a{
     text-decoration: none;
     color: #fff;
 }
@@ -39,15 +38,13 @@ header:hover img{
 .banner{
     margin-top: 50px;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
 }
 .banner img{
-    width: 556px;
-    height: 438px;
+    width: 530px;
+    height: 430px;
     transition: transform 5s ease-in-out;  
-}
-.banner-details{
-    padding: 0px 100px 0px 200px;
 }
 .banner-details h2{
     font-size: 60px;
@@ -64,13 +61,12 @@ header:hover img{
 
 .football-players{
     margin-top: 85px;
-    width: 1440px;
+    display: grid;
+    justify-content: center;
 }
 .all-players{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 0px 120px;
-    
 }
 .players{
     width: 330px;
@@ -78,6 +74,7 @@ header:hover img{
     background-color: #fff;
     margin-bottom: 30px;
     box-shadow: #E7E6E6 1px 1px 20px 10px;
+    margin-right: 40px;
 }
 .player{
     padding: 14px;
@@ -93,6 +90,7 @@ header:hover img{
 }
 .player-details p{
     margin-top: 10px;
+    line-height: 20px;
     text-align: justify;
     color: #6C6C6B;
 }
@@ -100,19 +98,20 @@ header:hover img{
 /* container style */
 
 .container-area{
-    width: 1440px;
     margin-top: 85px;
     margin-bottom: 85px;
 }
 .container-details{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0px 120px;
+    display: flex;
+    justify-content: center;
 }
 .container-details img{
-    width: 500px;
+    width: 450px;
     height: 300px;
     margin-left: 100px;
+}
+.article{
+    width: 470px;
 }
 .article h2{
     font-size: 40px;
@@ -126,11 +125,10 @@ header:hover img{
 /* team ranking style */
 
 .team-ranking{
-    width: 1440px;
     margin-bottom: 50px;
+    text-align: center;
 }
 .team-ranking a{
-    margin-left: 620px;
     padding: 10px;
     background-image: linear-gradient(gold, tomato);
     border-radius: 40px;
@@ -168,19 +166,18 @@ table {
 /* sports ball style */
 
 .sports-balls{
-    width: 1440px;
-    display: grid;
-    justify-content: center;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 200px;   
 }
 
 .sports-balls h2{
-    margin-left: 530px;
+    margin-left: 280px;
     font-size: 60px;
     color: green;
 }
 .balls{
-    margin-left: 200px;
-    width: 1300px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
@@ -197,7 +194,6 @@ table {
 
 footer{
     margin-top: 100px;
-    width: 1440px;
     text-align: center;
 }
 footer p{
@@ -225,223 +221,155 @@ footer p{
 /* mobile devices */
 @media only screen and (max-width:688px) {
     body{
-        width: 100%;
-    }
-    header{
-        width: 100%;
-        height: 900px;
+        margin: auto;
+      }
+    .menu{
+        margin: 0px;
+        padding: 0px;
     }
     .menu li{
-        list-style:none;
         font-size: 7px;
-        margin-right: 5px;
-        margin-top: 10px;
+        padding: 0px 7px;
+
     }
     .login{
-        margin-left: 40px;
+        margin-left: 20px;
     }
     .banner{
         display: flex;
         flex-direction: column;
-        grid-row-gap: 60px;
+        justify-content: center;
     }
     .banner img{
-        width: 350px;
-        height: 300px;
-    }
-    .banner-details{
-        padding: 0px;
-        margin-left: 25px;
+        margin-top: 70px;
+        width: 280px;
+        height: 230px;
     }
     .banner-details h2{
         font-size: 40px;
     }
-    .football-players{
-        width: 100%;
-    }
     .all-players{
-        width: 100%;
-        margin: 0px;
-        padding: 0px;
+        margin-left: 40px;
         display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content:center;
-        grid-column-gap:40px;
-    }
-    .players{
-        height: 715px;
-    }
-    .container-area{
-        width: 100%;
-        justify-content: center;
+        flex-direction: column;
     }
     .container-details{
-        margin-left: 10px;
-        margin-right: 20px;
+        margin-left: 20px;
         display: flex;
         flex-direction: column;
-        padding: 10px;
+        justify-content:center;
+    }
+    .container-details h2{
+        font-size: 30px;
+    }
+    .container-details p{
+        width: 335px;
     }
     .container-details img{
-        width: 330px;
-        margin-top: 30px;
         margin-left: 0px;
+        margin-top:50px;
+        width: 335px;
     }
-    .team-ranking{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-left: 0px;
-    }
-    .team-ranking a{
-        margin-left: 0px;
-        background-image: none;
-        display: flex;
-        flex-direction: column;
-        color:blue;
-        font-size: 35px;
-        justify-content: center;
-        align-items: center;
+    .team-ranking caption{
+        font-size: 50px;
     }
     table{
-        width: 0%;
-    }
-    table caption{
-        font-size: 45px;
+        width: 335px;
     }
     .sports-balls{
-        width: 100%;
+        margin: 0px;
     }
     .sports-balls h2{
-        margin-left: 0px;
+        margin-left: 25px;
         font-size: 40px;
-        color: green;
-        text-align: center;
     }
     .balls{
-        width: 100%;
-        margin-left: 10px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-    }
-    .ball img{
-        width: 100px;
-        height: 100px;
-        transition: transform 3s ease-in-out;
-    }
-    .ball:hover img{
-        transform:scale(1.5)
-    }
-    footer{
-        width: 100%;
-        margin-top:100px;
+        margin-left: 60px;
     }
     .logo img{
-        width: 350px;
+        width: 280px;
     }
-    .logo, .icon ,p {
-        text-align: center;
-        font-size: 20px;
-    }  
+    
 }
 
 /* ipad devices */
 @media only screen and (min-width:689px) and (max-width:992px) {
     body{
-        width: 100%;
-    }
-    header{
-        width: 100%;
-        height: 1000px;
+        margin: auto;
+      }
+    .menu{
+        margin: 0px;
+        padding: 0px;
     }
     .menu li{
-        list-style:none;
-        font-size: 16px;
-        margin-right: 10px;
-        margin-top: 10px;
+        font-size: 13px;
+        padding: 0px 17px;
+
     }
     .login{
-        margin-left: 65px;
+        margin-left: 85px;
     }
     .banner{
         display: flex;
         flex-direction: column;
-        grid-row-gap: 20px
+        justify-content: center;
     }
-    .football-players{
-        width: 100%;
+    .banner img{
+        margin-top: 70px;
+        width: 550px;
+        height: 500px;
+    }
+    .banner-details h2{
+        font-size: 80px;
     }
     .all-players{
-        width: 100%;
-        margin: 0px;
-        padding: 0px;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content:center;
-        grid-column-gap:40px;
-    }
-    .container-area{
-        width: 100%;
-        justify-content: center;
-    }
-    .container-details{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        grid-template-columns: repeat(1, 1fr);
-        padding: 40px;
-    }
-    .container-details img{
-        margin-top: 30px;
-        margin-left: 0px;
-    }
-    .article p{
-        margin-right: 40px;
-    }
-    .team-ranking{
-        width: 100%;
-        margin-left: 0px;
-    }
-    .team-ranking a{
-        margin-left:300px;
-    }
-    table{
-        margin-left: 0px;
-        width: 500px;
-    }
-    .sports-balls{
-        width: 100%;
-    }
-    .sports-balls h2{
-        margin-left: 0px;
-        font-size: 40px;
-        color: green;
-        text-align: center;
-    }
-    .balls{
-        width: 100%;
-        margin-left: 0px;
+        margin-left: 40px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 40px;
-        justify-content: center;
     }
-    .ball img{
-        width: 100px;
-        height: 100px;
-        transition: transform 3s ease-in-out;
+    .container-details{
+        
+        margin-left: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
     }
-    .ball:hover img{
-        transform:scale(1.5)
+    .container-details h2{
+        font-size: 70px;
+        width: 689px;
     }
-    footer{
-        width: 100%;
-        margin-top:100px;
+    .container-details p{
+        width: 689px;
     }
-    .logo, .icon ,p {
-        text-align: center;
-    }  
+    .container-details img{
+        margin-left: 0px;
+        margin-top:50px;
+        width: 689px;
+        height: 450px;
+    }
+    .team-ranking caption{
+        font-size: 70px;
+    }
+    table{
+        width: 689px;
+    }
+    .sports-balls{
+        margin-left: 0px;
+    }
+    .sports-balls h2{
+        margin-left: 250px;
+        font-size: 40px;
+    }
+    .balls{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 150px;
+    }
+    .logo img{
+        margin: 0px;
+        width: 600px;
+    }
+    
 }
